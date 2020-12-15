@@ -1,0 +1,59 @@
+@import "../../styles/theme.scss";
+
+.tab {
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  position: fixed;
+  scroll-view {
+    width: 750px;
+  }
+  &__container {
+    min-width: 100%;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    // padding: 0 22px;
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      position: relative;
+      z-index: 10;
+      font-size: 28px;
+      transition: all 0.2s;
+      white-space: nowrap;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0 35px 20px;
+      image {
+        width: 80px;
+        height: 80px;
+        display: block;
+        margin-bottom: 10px;
+      }
+    }
+
+    &-item.active {
+      color: $--color-primary;
+    }
+
+    &-line {
+      position: absolute;
+      transition: all 0.2s linear;
+      background-color: $--color-primary;
+      width: 80px;
+      height: 10px;
+      border-radius: 10px;
+      bottom: 0;
+    }
+  }
+}
